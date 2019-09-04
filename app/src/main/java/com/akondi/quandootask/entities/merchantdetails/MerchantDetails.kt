@@ -1,9 +1,9 @@
 package com.akondi.quandootask.entities.merchantdetails
+import com.akondi.quandootask.entities.merchants.Image
 
 data class MerchantDetails(
     val bookable: Boolean,
     val ccvEnabled: Boolean,
-    val chain: Chain,
     val currency: String,
     val documents: List<Any>,
     val id: Int,

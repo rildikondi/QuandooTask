@@ -11,13 +11,13 @@ import javax.inject.Inject
 class MerchantsViewModel
 @Inject constructor(private val getMerchants: GetMerchants) : BaseViewModel() {
 
-    var merchants: MutableLiveData< List<MerchantView>> = MutableLiveData()
+    var merchants: MutableLiveData<List<MerchantView>> = MutableLiveData()
 
     fun loadMerchants() = viewModelScope.launch {
         getMerchants(UseCase.None()) { it.either(::handleFailure, ::handleMerchantList) }
     }
 
     private fun handleMerchantList(merchants: Merchants) {
-        this.merchants.value = merchants.merchants.map { MerchantView(it.id, it.name, it.images) }
+        this.merchants.value = merchants.merchants.map { MerchantView(it.id, it.name, it.images[0].url) }
     }
 }

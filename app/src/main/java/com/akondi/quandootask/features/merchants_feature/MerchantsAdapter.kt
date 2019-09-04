@@ -31,7 +31,7 @@ class MerchantsAdapter
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(merchantView: MerchantView, clickListener: (MerchantView, Navigator.Extras) -> Unit) {
             itemView.merchantName.text = merchantView.name
-            itemView.merchantPoster.loadFromUrl(merchantView.images[0].url)
+            itemView.merchantPoster.loadFromUrl(merchantView.url)
             itemView.setOnClickListener { clickListener(merchantView, Navigator.Extras(itemView.merchantPoster)) }
         }
     }

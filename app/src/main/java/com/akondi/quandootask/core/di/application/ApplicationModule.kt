@@ -23,7 +23,7 @@ class ApplicationModule(private val application: AndroidApplication) {
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(" https://api.quandoo.com/v1/")
+            .baseUrl("https://api.quandoo.com/v1/")
             .client(createClient())
             .addConverterFactory(GsonConverterFactory.create())
             .build()

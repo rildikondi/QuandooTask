@@ -43,12 +43,13 @@ class MerchantsFragment : BaseFragment() {
         loadMerchants()
     }
 
-
     private fun initializeView() {
-        merchantList.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
+        merchantList.layoutManager =
+            StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
         merchantList.adapter = merchantsAdapter
         merchantsAdapter.clickListener = { merchant, navigationExtras ->
-            navigator.showMerchantDetails(activity!!, merchant, navigationExtras) }
+            navigator.showMerchantDetails(activity!!, merchant, navigationExtras)
+        }
     }
 
     private fun loadMerchants() {

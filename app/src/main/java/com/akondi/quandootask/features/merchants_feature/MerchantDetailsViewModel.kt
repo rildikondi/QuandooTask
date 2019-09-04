@@ -15,7 +15,7 @@ class MerchantDetailsViewModel
 
     var merchantDetails: MutableLiveData<MerchantDetailsView> = MutableLiveData()
 
-    fun loadMovieDetails(merchantId: Int) = viewModelScope.launch {
+    fun loadMerchantDetails(merchantId: Int) = viewModelScope.launch {
         getMerchantDetails(GetMerchantDetails.Params(merchantId)) {
             it.either(
                 ::handleFailure,

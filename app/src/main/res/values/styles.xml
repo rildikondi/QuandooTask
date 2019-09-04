@@ -43,6 +43,13 @@
         <item name="android:background">@color/colorPrimary</item>
     </style>
 
+    <style name="MerchantSlider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:transitionName">@string/merchant_transition_poster</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
     <style name="MerchantDetailsTitle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -56,7 +63,7 @@
     <style name="MerchantDetailsText" parent="MerchantDetailsTitle">
         <item name="android:textColor">@color/colorTextPrimary</item>
         <item name="android:textSize">@dimen/merchant_details_text</item>
-        <item name="android:paddingBottom">25dp</item>
+        <item name="android:paddingBottom">10dp</item>
         <item name="android:freezesText">true</item>
     </style>
 </resources>

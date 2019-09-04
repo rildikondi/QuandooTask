@@ -4,6 +4,7 @@ data class OpeningTimes(
     val standardOpeningTimes: StandardOpeningTimes
 ) {
     companion object {
-        fun empty() = OpeningTimes(StandardOpeningTimes.empty())
+        fun empty() =
+            OpeningTimes(StandardOpeningTimes.empty())
     }
 }

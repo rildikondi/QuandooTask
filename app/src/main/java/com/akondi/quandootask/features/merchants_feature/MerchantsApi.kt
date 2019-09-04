@@ -35,9 +35,9 @@ internal interface MerchantsApi {
 //        @Query("bookable") bookable: String = ""
     ): Call<MerchantsResponse>
 
-    @GET(MERCHANT_DETAILS)
+    @GET("merchants/{merchantId}")
     fun merchantDetails(
         /*@Header(HEADER_API_PARAM) token: String = HEADER_API_KEY,*/
-        @Path(PARAM_MERCHANT_ID) merchantId: Int
+        @Path("merchantId") merchantId: Int
     ): Call<MerchantDetailsResponse>
 }

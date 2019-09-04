@@ -1,5 +1,6 @@
 package com.akondi.quandootask.entities.merchantdetails
 
+
 data class Coordinates(
     val latitude: Double,
     val longitude: Double

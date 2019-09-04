@@ -10,6 +10,12 @@ data class Address(
     val zipcode: String
 ) {
     companion object {
-        fun empty() = Address(String.empty(), String.empty(), String.empty(), String.empty(), String.empty())
+        fun empty() = Address(
+            String.empty(),
+            String.empty(),
+            String.empty(),
+            String.empty(),
+            String.empty()
+        )
     }
 }

@@ -5,6 +5,9 @@ data class Location(
     val coordinates: Coordinates
 ) {
     companion object {
-        fun empty() = Location(Address.empty(), Coordinates.empty())
+        fun empty() = Location(
+            Address.empty(),
+            Coordinates.empty()
+        )
     }
 }

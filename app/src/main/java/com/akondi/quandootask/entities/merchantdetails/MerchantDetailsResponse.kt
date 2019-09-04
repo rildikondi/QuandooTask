@@ -1,11 +1,12 @@
 package com.akondi.quandootask.entities.merchantdetails
 
 import com.akondi.cleancoremvvm.core.extension.empty
+import com.akondi.quandootask.entities.merchants.Image
+
 
 data class MerchantDetailsResponse(
     val bookable: Boolean,
     val ccvEnabled: Boolean,
-    val chain: Chain,
     val currency: String,
     val documents: List<Any>,
     val id: Int,
@@ -24,7 +25,6 @@ data class MerchantDetailsResponse(
         fun empty() = MerchantDetailsResponse(
             false,
             false,
-            Chain(0, String.empty()),
             String.empty(),
             emptyList(),
             0,
@@ -44,7 +44,6 @@ data class MerchantDetailsResponse(
     fun toMerchantDetails() = MerchantDetails(
         bookable,
         ccvEnabled,
-        chain,
         currency,
         documents,
         id,

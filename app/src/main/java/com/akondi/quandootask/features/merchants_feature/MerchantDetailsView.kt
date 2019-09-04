@@ -1,6 +1,7 @@
 package com.akondi.quandootask.features.merchants_feature
 
 import com.akondi.quandootask.entities.merchantdetails.*
+import  com.akondi.quandootask.entities.merchants.Image
 
 data class MerchantDetailsView(
     val bookable: Boolean,
