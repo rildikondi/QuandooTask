@@ -18,34 +18,35 @@ enum class ConnectivityMode {
 
 //var connectivityMode = ConnectivityMode.NONE
 
-inline val Context.connectivity: ConnectivityMode get() {
+inline val Context.connectivity : Boolean
+    get() : Boolean {
     val connectivityManager = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
     connectivityManager.run {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getNetworkCapabilities(activeNetwork)?.run {
                 return when {
-                    hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> ConnectivityMode.WIFI
-                    hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> ConnectivityMode.MOBILE
-                    hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> ConnectivityMode.OTHER
-                    hasTransport(NetworkCapabilities.TRANSPORT_BLUETOOTH) -> ConnectivityMode.MAYBE
-                    else -> ConnectivityMode.NONE
+                    hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
+                    hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
+                    hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
+                    hasTransport(NetworkCapabilities.TRANSPORT_BLUETOOTH) -> true
+                    else -> false
                 }
             }
         } else {
             @Suppress("DEPRECATION")
             activeNetworkInfo?.run {
                 return when (type) {
-                    ConnectivityManager.TYPE_WIFI -> ConnectivityMode.WIFI
-                    ConnectivityManager.TYPE_MOBILE -> ConnectivityMode.MOBILE
-                    ConnectivityManager.TYPE_ETHERNET -> ConnectivityMode.OTHER
-                    ConnectivityManager.TYPE_BLUETOOTH -> ConnectivityMode.MAYBE
-                    else -> ConnectivityMode.NONE
+                    ConnectivityManager.TYPE_WIFI -> true
+                    ConnectivityManager.TYPE_MOBILE -> true
+                    ConnectivityManager.TYPE_ETHERNET -> true
+                    ConnectivityManager.TYPE_BLUETOOTH -> true
+                    else -> false
                 }
             }
         }
     }
-    return ConnectivityMode.NONE
+    return false
 }
 
 inline fun <reified T : Activity> Context.startActivity() {

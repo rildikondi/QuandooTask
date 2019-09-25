@@ -1,3 +1,3 @@
-package com.akondi.cleancoremvvm.core.extension
+package com.akondi.quandootask.core.extensions
 
 fun String.Companion.empty() = ""

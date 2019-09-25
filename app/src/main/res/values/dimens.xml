@@ -2,7 +2,6 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
 
     <!-- Card view. -->
     <dimen name="card_corner_radius">0dp</dimen>
@@ -12,9 +11,5 @@
     <dimen name="merchant_details_text">20dp</dimen>
 
     <!-- Progress view. -->
-    <dimen name="progress_view_height">10dp</dimen>
 
-    <dimen name="margin">16dp</dimen>
-
-    <integer name="animation_duration_medium">1000</integer>
 </resources>

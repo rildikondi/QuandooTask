@@ -3,8 +3,8 @@ package com.akondi.quandootask.core.di.application
 import com.akondi.quandootask.application.AndroidApplication
 import com.akondi.quandootask.core.di.viewmodel.ViewModelModule
 import com.akondi.quandootask.core.navigation.RouteActivity
-import com.akondi.quandootask.features.merchants_feature.MerchantDetailsFragment
-import com.akondi.quandootask.features.merchants_feature.MerchantsFragment
+import com.akondi.quandootask.merchants.presentation.fragments.MerchantDetailsFragment
+import com.akondi.quandootask.merchants.presentation.fragments.MerchantsFragment
 import dagger.Component
 import javax.inject.Singleton
 

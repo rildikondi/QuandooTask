@@ -8,7 +8,7 @@ allprojects {
 ext {
     //Android libraries
     coreKtx_version = '1.0.2'
-    appCompat_version = '1.0.2'
+    appCompat_version = '1.1.0-rc01'
     constraintLayout_version = '2.0.0-beta2'
     archComponents_version = '2.2.0-alpha03'
     material = '1.1.0-alpha09'
@@ -36,17 +36,17 @@ ext {
     ocr_version = '16.0.1'
     phrase_version = '1.1.0'
 
-
     //Unit Testing
+    test_core_version = '1.2.1-alpha02'
     robolectric_version = '4.3'
-    junit_version = '4.13-beta-3'
-    mockito_version = '1.4.0'
+    junit_version = '4.12'
+    mockito_kotlin_version = '2.1.0'
     kluent_version = '1.14'
     mockitoCore_version = '3.0.0'
     mockwebserver_version = '4.1.0'
 
     //Acceptance Testing
-    runner_version = '1.3.0-alpha02'
+    runner_version = '1.2.0'
     espresso_version = '3.3.0-alpha02'
 
     //Development
@@ -90,12 +90,14 @@ ext {
     ]
 
     unitTesting = [
-            kotlin     : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
-            kotlinTest : "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version",
-            robolectric: "org.robolectric:robolectric:$robolectric_version",
-            junit      : "junit:junit:$junit_version",
-            mockito    : "com.nhaarman:mockito-kotlin:$mockito_version",
-            kluent     : "org.amshove.kluent:kluent:$kluent_version",
+            kotlin       : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            kotlinTest   : "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version",
+            robolectric  : "org.robolectric:robolectric:$robolectric_version",
+            testCore :   "androidx.test:core:$test_core_version",
+            junit        : "junit:junit:$junit_version",
+            mockitoCore  : "org.mockito:mockito-core:$mockitoCore_version",
+            mockitoKotlin: "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_kotlin_version",
+            kluent       : "org.amshove.kluent:kluent:$kluent_version",
     ]
 
     acceptanceTesting = [

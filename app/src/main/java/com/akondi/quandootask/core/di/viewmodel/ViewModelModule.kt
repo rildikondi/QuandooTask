@@ -2,8 +2,8 @@ package com.akondi.quandootask.core.di.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.akondi.quandootask.features.merchants_feature.MerchantsViewModel
-import com.akondi.quandootask.features.merchants_feature.MerchantDetailsViewModel
+import com.akondi.quandootask.merchants.presentation.viewmodels.MerchantsViewModel
+import com.akondi.quandootask.merchants.presentation.viewmodels.MerchantDetailsViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

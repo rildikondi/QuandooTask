@@ -8,13 +8,12 @@ import android.view.View
 import android.widget.ImageView
 import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.FragmentActivity
-import com.akondi.cleancoremvvm.core.extension.empty
-import com.akondi.quandootask.core.extensions.startActivity
-import com.akondi.quandootask.features.login_feature.LoginActivity
-import com.akondi.quandootask.features.login_feature.Authenticator
-import com.akondi.quandootask.features.merchants_feature.MerchantDetailsActivity
-import com.akondi.quandootask.features.merchants_feature.MerchantView
-import com.akondi.quandootask.features.merchants_feature.MerchantsActivity
+import com.akondi.quandootask.core.extensions.empty
+import com.akondi.quandootask.login.LoginActivity
+import com.akondi.quandootask.login.Authenticator
+import com.akondi.quandootask.merchants.presentation.activities.MerchantDetailsActivity
+import com.akondi.quandootask.merchants.domain.entities.merchants.MerchantView
+import com.akondi.quandootask.merchants.presentation.activities.MerchantsActivity
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -22,7 +21,7 @@ import javax.inject.Singleton
 class Navigator
 @Inject constructor(private val authenticator: Authenticator) {
 
-    private fun showLogin(context: Context) = context.startActivity<LoginActivity>()
+    private fun showLogin(context: Context) = context.startActivity(LoginActivity.callingIntent(context))
 
     fun showMain(context: Context) {
         when (authenticator.userLoggedIn()) {

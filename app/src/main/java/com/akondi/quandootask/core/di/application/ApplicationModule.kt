@@ -3,7 +3,7 @@ package com.akondi.quandootask.core.di.application
 import android.content.Context
 import com.akondi.quandootask.BuildConfig
 import com.akondi.quandootask.application.AndroidApplication
-import com.akondi.quandootask.features.merchants_feature.MerchantsRepository
+import com.akondi.quandootask.merchants.domain.repository.MerchantsRepository
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
